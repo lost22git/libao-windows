@@ -20,6 +20,14 @@ download & patch files.
 
 open `windows/VS20XX/libao.sln` with Visual Stduio & build.
 
+or build x64
+
+open `x64 native tool command prompt` 
+
+```
+MSBuild .\windows\VS20xx\libao_x64.vcxproj -t:Rebuild /property:Configuration=Release /property:Platform=x64
+```
+
 
 ## Usage
 
