@@ -24,7 +24,7 @@ or build x64
 
 open `x64 native tool command prompt` 
 
-```
+```powershell
 MSBuild .\windows\VS20xx\libao_x64.vcxproj -t:Rebuild /property:Configuration=Release /property:Platform=x64
 ```
 
