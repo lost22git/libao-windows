@@ -10,6 +10,7 @@ Building [libao](https://www.xiph.org/ao/)(libao.lib & libao.dll) with Visual St
 
 ## Build
 
+
 download & patch files.
 
 ```.text
@@ -18,15 +19,43 @@ download & patch files.
  $ ./prepare.sh
 ```
 
+
+### build x86
+
 open `windows/VS20XX/libao.sln` with Visual Stduio & build.
 
-or build x64
+OR 
+
+open `x64 native tool command prompt` 
+
+```powershell
+MSBuild .\windows\VS20xx\libao.vcxproj -t:Rebuild /property:Configuration=Release
+```
+
+
+lib & dll files.
+
+```
+.\windows\VS20xx\[Debug/Release]\libao.dll
+.\windows\VS20xx\[Debug/Release]\libao.lib
+```
+
+###  build x64
 
 open `x64 native tool command prompt` 
 
 ```powershell
 MSBuild .\windows\VS20xx\libao_x64.vcxproj -t:Rebuild /property:Configuration=Release /property:Platform=x64
 ```
+
+
+lib & dll files.
+
+```
+.\windows\VS20xx\x64\[Debug/Release]\libao.dll
+.\windows\VS20xx\x64\[Debug/Release]\libao.lib
+```
+
 
 
 ## Usage
@@ -38,11 +67,3 @@ build/ao/ao.h
 build/ao/ao_private.h
 build/ao/os_types.h
 ```
-
-lib & dll files.
-
-```.text
-windows/VS20XX/(Debug/Release)/libao.dll
-windows/VS20XX/(Debug/Release)/libao.lib
-```
-
